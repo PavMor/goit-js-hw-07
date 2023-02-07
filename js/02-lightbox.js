@@ -17,4 +17,10 @@ function createGalleryMarkUp(galleryItems) {
     .join("");
 }
 
-console.log(galleryItems);
+function onGalleryImageClick(e) {
+  e.preventDefault();
+  var lightbox = new SimpleLightbox(".gallery__item", {
+    captionDelay: 250,
+    captionData: "alt",
+  });
+}
